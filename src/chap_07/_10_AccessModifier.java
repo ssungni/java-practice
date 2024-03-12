@@ -2,6 +2,9 @@ package chap_07;
 
 public class _10_AccessModifier {
     public static void main(String[] args) {
+        // 캡슐화 (Encapsulation)
+        // 정보은닉 (Information hiding)
+
         // 접근 제어자
         // 1. private: 해당 클래스 내에서만 접근 가능
         // 2. public: 모든 클래스에서 접근 가능
