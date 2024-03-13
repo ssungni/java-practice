@@ -6,7 +6,8 @@ public class FactoryCam extends Camera{ // 공장 화재 감지 카메라
 //    public String name;
 
     public FactoryCam() {
-        this.name = "공장 카메라";
+        // this.name = "공장 카메라";
+        super("공장 카메라");
     }
 
 //    public void takePicture() {
@@ -14,10 +15,12 @@ public class FactoryCam extends Camera{ // 공장 화재 감지 카메라
 //        System.out.println("사진을 촬영합니다.");
 //    }
 //
-//    public void recordVideo() {
-//        // 동영상 녹화
+    public void recordVideo() {
+        // 동영상 녹화
 //        System.out.println("동영상을 녹화합니다.");
-//    }
+        super.recordVideo(); // 부모의 클래스 내용을 쓰고 추가 기능을 쓸 예정
+        detectFire();
+    }
 
     public void detectFire() {
         // 화재 감지

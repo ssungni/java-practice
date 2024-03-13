@@ -5,7 +5,11 @@ public class Camera { // 일반 카메라
     public String name;
 
     public Camera() {
-        this.name = "카메라";
+        this("카메라");
+    }
+
+    protected Camera(String name) {
+        this.name = name;
     }
 
     public void takePicture() {

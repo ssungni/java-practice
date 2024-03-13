@@ -7,13 +7,17 @@ public class SpeedCam extends Camera{ // 과속 방지 카메라
 //    public String name;
 
     public SpeedCam() {
-        this.name = "과속단속 카메라";
+        // this.name = "과속단속 카메라";
+        super("과속단속 카메라");
     }
 
-//    public void takePicture() {
-//        // 사진 촬영
+    public void takePicture() {
+        // 사진 촬영
 //        System.out.println("사진을 촬영합니다.");
-//    }
+        super.takePicture(); // 부모의 클래스 내용을 쓰고 추가 기능을 쓸 예정
+        checkSpeed();
+        recognizedLicensePlate();
+    }
 //
 //    public void recordVideo() {
 //        // 동영상 녹화

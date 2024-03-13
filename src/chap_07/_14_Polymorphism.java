@@ -35,7 +35,27 @@ public class _14_Polymorphism {
 
         System.out.println("#3---------------------------");
 //        factoryCam.detectFire();
-//        speed
+//        speedCam.detectFire();
+//        speedCam.recognizedLicensePlate();
 
+
+        // camera 객체가 Camera로 만들어진 것이라면?
+        if (camera instanceof Camera) {
+            System.out.println("카메라입니다.");
+        }
+
+        if (factoryCam instanceof FactoryCam) {
+            ((FactoryCam) factoryCam).detectFire();
+        }
+
+        if (speedCam instanceof SpeedCam) {
+            ((SpeedCam) speedCam).checkSpeed();
+            ((SpeedCam) speedCam).recognizedLicensePlate();
+        }
+
+        Object[] objs = new Object[3];
+        objs[0] = new Camera();
+        objs[1] = new FactoryCam();
+        objs[2] = new SpeedCam();
     }
 }
